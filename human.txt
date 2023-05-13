@@ -1,0 +1,31 @@
+//omarsabry
+//20216573
+
+package com.mycompany.omar_first_project;
+class BankSystem {
+    
+  
+
+class human {
+    private String Name;
+    private int Age;
+    private char Gender;
+
+    public human(String Name, int Age, char Gender) {
+        this.Name = Name;
+        this.Age = Age;
+        this.Gender = Gender;
+    }
+
+    void PrintData() {
+        System.out.println("Name: " + Name);
+        System.out.println("Age: " + Age);
+        System.out.println("Gender: " + Gender);
+    }
+
+    final void Greet() {
+        System.out.println("Good Morning");
+    }
+}
+
+}

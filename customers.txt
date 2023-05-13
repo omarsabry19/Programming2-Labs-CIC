@@ -1,0 +1,26 @@
+//omarsabry
+//20216573
+
+package com.mycompany.omar_first_project;
+class BankSystem {
+    
+  
+package BankSystem;
+
+class customer extends human {
+    private String SSN;
+    private String Address;
+    private BankAccount account;
+
+    public customer(String Name, int Age, char Gender, String SSN, String Address) {
+        super(Name, Age, Gender);
+        this.SSN = SSN;
+        this.Address = Address;
+        this.account = new BankAccount();
+    }
+
+    public BankAccount getAccount() {
+        return account;
+    }
+}
+}

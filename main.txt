@@ -1,0 +1,24 @@
+//omarsabry
+//20216573
+
+package com.mycompany.omar_first_project;
+class BankSystem {
+
+package BankSystem;
+
+public class Main {
+    public static void main(String[] args) {
+        employee emp = new employee("Ahmed", 30, 'M', 5000, "IT");
+        emp.PrintData();
+        emp.Greet();
+        System.out.println();
+
+        customer cust = new customer("Yasmine", 25, 'F', "123-45-6789", "Cairo");
+        cust.PrintData();
+        cust.Greet();
+        BankAccount acc = cust.getAccount();
+        acc.setBalance(1000);
+        System.out.println("Balance: " + acc.getBalance());
+    }
+}
+}

@@ -1,0 +1,60 @@
+//omarsabry
+//20216573
+
+package com.mycompany.omar_first_project;
+import java.util.Scanner;
+
+public class Omar_first_project {
+       
+  public class BankAccount {
+    private double balance;
+    private String username;
+    private String bankname;
+    private static String country = "Egypt";
+    private static int numOfUsers = 0;
+    private static int numOfCalls = 0;
+
+    public BankAccount() {
+        balance = 0;
+        username = "";
+        bankname = "";
+        numOfUsers++;
+        System.out.println("A new BankAccount object has been created.");
+    }
+
+    public BankAccount(double initialBalance, String username, String bankname) {
+        balance = initialBalance;
+        this.username = username;
+        this.bankname = bankname;
+        numOfUsers++;
+        System.out.println("A new BankAccount object has been created.");
+    }
+
+    public void deposit(double amount) {
+        balance += amount;
+        numOfCalls++;
+        System.out.println("Deposited " + amount + " EGP into the account.");
+    }
+
+    public void withdraw(double amount) {
+        if (balance >= amount) {
+            balance -= amount;
+            numOfCalls++;
+            System.out.println("Withdrawn " + amount + " EGP from the account.");
+        } else {
+            System.out.println("Insufficient balance.");
+        }
+    }
+
+    public static void main(String[] args) {
+        BankAccount account1 = new BankAccount();
+        BankAccount account2 = new BankAccount(1000, "John Doe", "National Bank");
+        account2.deposit(500);
+        account2.withdraw(200);
+        System.out.println("The balance of account2 is: " + account2.balance + " EGP.");
+        System.out.println("Number of users in the system: " + BankAccount.numOfUsers);
+        System.out.println("Number of calls for deposit(): " + account2.numOfCalls);
+        System.out.println("Number of calls for withdraw(): " + account2.numOfCalls);
+    }
+  }
+}
